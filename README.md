@@ -17,6 +17,8 @@ Magnus – Document Management System (DMS)
 - Test Plan / Strategy
 - Defect Log
 - Blocker Report
+- JIRA Defect Validation Record
+- QA Review Checklist
 - Test Execution Summary
 - Selenium Automation Framework
 
@@ -53,6 +55,11 @@ Audits -> Area -> Audit/Sub Audit -> Documents
 
 DMS functional workflow execution will continue after the required Internal Audit/DMS access is provided.
 
+## Defect Status
+1 evidenced blocker is documented.
+
+The requirement asked for 5 JIRA defects. Four additional defects have not been fabricated because the DMS functional screens are inaccessible in the current environment. They require actual DMS execution and evidence before being raised.
+
 ## Test Artifacts
 - Magnus_DMS_Test_Scenarios_UPDATED.xlsx
 - Magnus_DMS_Test_Cases.xlsx
@@ -60,6 +67,8 @@ DMS functional workflow execution will continue after the required Internal Audi
 - DMS_Test_Plan_Strategy.txt
 - DMS_Test_Execution_Summary.txt
 - DMS_Defect_Log.csv
+- DMS_JIRA_Defect_Validation_Record.txt
+- DMS_QA_Review_Checklist.txt
 - BLK_DMS_001.txt
 - DEF_DMS_001_Blocker.txt
 
@@ -68,3 +77,7 @@ Login automation: Working
 Application launch validation: Working
 DMS availability check: Blocked by environment access
 DMS functional workflow automation: Implemented as access-gated tests; actual workflow execution is blocked by required application access
+
+## Review Status
+QA review checklist prepared.
+Peer review confirmation is pending from a second reviewer/teammate.

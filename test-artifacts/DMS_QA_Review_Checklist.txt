@@ -1,0 +1,59 @@
+﻿MAGNUS DMS – QA REVIEW CHECKLIST
+
+Project: Magnus Document Management System
+Review Date: 04-10-2026
+
+Documents Reviewed:
+[✓] Signed-off DMS FDD
+[✓] Test Scenarios – 20 scenarios
+[✓] Test Cases – 20 test cases
+[✓] Requirement Traceability Matrix
+[✓] Test Plan / Test Strategy
+[✓] Test Execution Summary
+[✓] Defect / Blocker Log
+[✓] Selenium Automation Framework
+[✓] README
+[✓] Requirements Reference
+
+Coverage Review:
+[✓] FR_DMS_01 – Access Documents
+[✓] FR_DMS_02 – Create New Document Containers
+[✓] FR_DMS_03 – Add New Version / Check-In
+[✓] FR_DMS_04 – Linking / Associating Documents
+[✓] FR_DMS_05 – Trigger a Task
+[✓] FR_DMS_06 – Manage Document Status
+[✓] FR_DMS_07 – View Document Details
+[✓] FR_DMS_08 – Version History
+[✓] FR_DMS_09 – Download Document
+[✓] FR_DMS_10 – Check Out Document
+[✓] FR_DMS_11 – Delete Document
+[✓] FR_DMS_12 – Remove Association
+[✓] FR_DMS_13 – Apply Permissions
+
+Automation Review:
+[✓] Application launch validation
+[✓] Login validation
+[✓] DMS availability validation
+[✓] Access-gated automation for FR_DMS_01 to FR_DMS_13
+
+Execution Review:
+[✓] Maven build successful
+[✓] 16 tests executed
+[✓] 2 tests passed
+[✓] 0 tests failed
+[✓] 14 tests skipped
+[✓] DMS blocker documented
+
+Peer Review Status:
+PENDING – Requires confirmation from a second reviewer/teammate.
+
+Reviewer Name:
+________________________________
+
+Reviewer Comments:
+________________________________
+________________________________
+
+Final Review Status:
+QA documentation and automation package prepared.
+Actual DMS functional execution remains blocked by BLK_DMS_001.

@@ -1,0 +1,49 @@
+﻿MAGNUS DMS – JIRA DEFECT VALIDATION RECORD
+
+Project: Magnus Document Management System
+Date: 04-10-2026
+
+Required Defect Count:
+5 JIRA defects
+
+Defect Validation:
+
+DEFECT 1
+ID: BLK_DMS_001
+Status: EVIDENCED
+Severity: S1
+Priority: P1
+Summary: Internal Audit / DMS module is not available for the current test user
+Evidence: Login succeeds, but the Audits/Internal Audit navigation required for DMS is unavailable.
+Result: Legitimate blocker defect documented and reproducible in the current test environment.
+
+DEFECT 2
+Status: NOT RAISED
+Reason: DMS functional screen cannot be accessed due to BLK_DMS_001.
+Required Evidence: Actual execution of a DMS functional flow.
+
+DEFECT 3
+Status: NOT RAISED
+Reason: DMS functional screen cannot be accessed due to BLK_DMS_001.
+Required Evidence: Actual execution of a DMS functional flow.
+
+DEFECT 4
+Status: NOT RAISED
+Reason: DMS functional screen cannot be accessed due to BLK_DMS_001.
+Required Evidence: Actual execution of a DMS functional flow.
+
+DEFECT 5
+Status: NOT RAISED
+Reason: DMS functional screen cannot be accessed due to BLK_DMS_001.
+Required Evidence: Actual execution of a DMS functional flow.
+
+Defect Integrity Statement:
+Only defects supported by actual test execution and observable evidence are recorded as defects.
+No unverified product defects have been fabricated.
+
+Current Defect Status:
+1 evidenced blocker
+4 defects pending DMS access and execution
+
+Required Next Action:
+Provide a test user with the required Internal Audit/DMS permissions and required DMS test data. Execute the applicable test cases and raise additional JIRA defects only when an actual deviation from the signed-off FDD is observed.
