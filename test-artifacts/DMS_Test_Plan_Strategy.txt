@@ -1,0 +1,75 @@
+MAGNUS DMS – TEST PLAN / TEST STRATEGY
+
+1. Objective
+Validate the Document Management System (DMS) functionality against the signed-off Functional Design Document (FDD) Version 2.1.
+
+2. Scope
+The testing scope covers:
+- Access Documents
+- Create New Document Containers
+- Add New Version / Check-In
+- Linking / Associating Documents
+- Trigger a Task
+- Manage Document Status
+- View Document Details
+- Version History
+- Download Document
+- Check Out Document
+- Delete Document
+- Remove Association
+- Apply Permissions
+
+3. Test Types
+- Functional Testing
+- UI Testing
+- Integration Testing
+- Regression Testing
+- Negative Testing
+- Data Validation
+- Selenium Automation Testing
+
+4. Test Levels
+- System Testing
+- End-to-End Testing
+
+5. Test Environment
+Application: Magnus
+Module: Document Management System
+URL: https://magnus.jalatechnologies.com/
+Automation: Java + Selenium WebDriver + TestNG + Maven
+Browser: Google Chrome
+
+6. Test Data
+- DMS_Test_Document_V1.txt
+- DMS_Test_Document_V2.txt
+- DMS_Bulk_Document_1.txt
+- DMS_Bulk_Document_2.txt
+
+7. Entry Criteria
+- Signed-off FDD available
+- Test scenarios and test cases prepared
+- Required test user available
+- Required Internal Audit/DMS permissions available
+- Required DMS test data available
+
+8. Exit Criteria
+- All executable test cases completed
+- Defects documented
+- Regression testing completed
+- Traceability verified
+- Automation execution completed for accessible functionality
+
+9. Current Blocker
+The current test user can log in successfully, but the Internal Audit/Audits module required for DMS testing is not available. Therefore, DMS functional execution and related automation are currently blocked.
+
+Blocker ID: BLK_DMS_001
+
+10. Deliverables
+- Test Scenarios
+- Test Cases
+- Traceability Matrix
+- Defect Reports
+- Selenium Automation Scripts
+- Test Execution Results
+- Test Summary
+

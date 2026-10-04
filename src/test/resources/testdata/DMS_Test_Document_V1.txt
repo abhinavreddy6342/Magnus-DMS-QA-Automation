@@ -1,0 +1,2 @@
+DMS Test Document - Version 1
+This file is created for Magnus DMS functional testing.

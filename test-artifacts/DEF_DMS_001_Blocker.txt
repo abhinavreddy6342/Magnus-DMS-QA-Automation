@@ -1,0 +1,22 @@
+﻿Project : Magnus
+Summary : Internal Audit / DMS module is not available for the current test user
+Severity : S1
+Priority : P1
+Version No : N/A
+Components/Module : DMS / Internal Audit
+Environment : Chrome - https://magnus.jalatechnologies.com/
+Test Case ID : DMS Availability Check
+Description : Verify that the Internal Audit module required to access the DMS functionality is available after successful login
+
+Test Steps :
+1. Login to Magnus using the assigned test user
+2. Navigate to the application home page
+3. Verify the availability of the Internal Audit / Audits module
+4. Verify access to the DMS document hierarchy
+
+Expected Result : The Internal Audit / Audits module should be available and allow navigation through Area -> Audit/Sub Audit -> Documents as defined in the signed-off DMS FDD
+
+Actual Result : Login is successful, but the Internal Audit / Audits module is not displayed. The DMS document hierarchy is therefore inaccessible.
+
+Status : Blocked
+Evidence : DmsAvailabilityTest skipped with BLK_DMS_001 because the expected Audits/Audit element was not found.

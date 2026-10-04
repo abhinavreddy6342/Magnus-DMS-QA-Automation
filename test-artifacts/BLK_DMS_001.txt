@@ -1,0 +1,31 @@
+Project: Magnus
+Module: DMS / Internal Audit
+
+Blocker ID: BLK_DMS_001
+
+Summary:
+Internal Audit / DMS module is not available for the current test user.
+
+Environment:
+https://magnus.jalatechnologies.com/
+
+Observed Result:
+User training@jalaacademy.com can log in successfully and reaches:
+https://magnus.jalatechnologies.com/Home/Index
+
+The visible navigation contains Home, Employee, More and Settings.
+No Audits, Internal Audit, Documents, Entity Tree View or Entities List option is available.
+
+Automation Evidence:
+DmsAvailabilityTest failed because the Audits/Audit element was not found.
+
+Expected:
+As per the DMS FDD, the user must be able to access:
+Audits -> Area -> Audit/Sub Audit -> Documents
+
+Impact:
+DMS functional execution and DMS Selenium automation cannot be executed against
+the current user/session until the required Internal Audit access and test data are provided.
+
+Status:
+Blocked

@@ -1,0 +1,5 @@
+﻿Java: 17+
+Maven: 3.9.16+
+Selenium WebDriver: 4.49.0
+TestNG: 7.9.0
+Google Chrome: Latest

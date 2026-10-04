@@ -1,0 +1,14 @@
+Requirement ID,Requirement,Scenario Coverage,Test Case Coverage,Automation Status
+FR_DMS_01,Access Documents,TS_DMS_001 TS_DMS_002 TS_DMS_003,TC_DMS_001 TC_DMS_002 TC_DMS_003,Blocked - Audit access unavailable
+FR_DMS_02,Create New Document Containers,TS_DMS_004 TS_DMS_005 TS_DMS_006,TC_DMS_004 TC_DMS_005 TC_DMS_006,Blocked - DMS access unavailable
+FR_DMS_03,Add New Version / Check-In,TS_DMS_007 TS_DMS_008 TS_DMS_009,TC_DMS_007 TC_DMS_008 TC_DMS_009,Blocked - DMS access unavailable
+FR_DMS_04,Linking / Associating Documents,TS_DMS_010 TS_DMS_011,TC_DMS_010 TC_DMS_011,Blocked - DMS access unavailable
+FR_DMS_05,Trigger a Task,TS_DMS_012,TC_DMS_012,Blocked - DMS access unavailable
+FR_DMS_06,Manage Document Status,TS_DMS_013 TS_DMS_014,TC_DMS_013 TC_DMS_014,Blocked - DMS access unavailable
+FR_DMS_07,View Document Details,TS_DMS_015,TC_DMS_015,Blocked - DMS access unavailable
+FR_DMS_08,Version History,TS_DMS_016,TC_DMS_016,Blocked - DMS access unavailable
+FR_DMS_09,Download Document,TS_DMS_017,TC_DMS_017,Blocked - DMS access unavailable
+FR_DMS_10,Check Out Document,TS_DMS_018,TC_DMS_018,Blocked - DMS access unavailable
+FR_DMS_11,Delete Document,TS_DMS_019,TC_DMS_019,Blocked - DMS access unavailable
+FR_DMS_12,Remove Association,TS_DMS_003,TC_DMS_003,Blocked - DMS access unavailable
+FR_DMS_13,Apply Permissions,TS_DMS_020,TC_DMS_020,Blocked - DMS access unavailable
