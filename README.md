@@ -1,127 +1,552 @@
-﻿# Magnus DMS – QA Automation Project
+# Magnus DMS – QA Automation & Manual Testing
 
-## Project
-Magnus – Document Management System (DMS)
+> **End-to-end QA project combining manual testing, requirements traceability, defect management, and Selenium automation for a Document Management System.**
 
-## Technology Stack
-- Java
+[![Java](https://img.shields.io/badge/Java-17%2B-orange)](https://www.oracle.com/java/)
+[![Selenium](https://img.shields.io/badge/Selenium-4.49.0-43B02A)](https://www.selenium.dev/)
+[![TestNG](https://img.shields.io/badge/TestNG-7.9.0-red)](https://testng.org/)
+[![Maven](https://img.shields.io/badge/Maven-3.9%2B-C71A36)](https://maven.apache.org/)
+[![Browser](https://img.shields.io/badge/Browser-Google%20Chrome-blue)](https://www.google.com/chrome/)
+
+---
+
+## 📌 Project Overview
+
+**Magnus DMS QA Automation** is a structured software quality assurance project created for testing the **Magnus Document Management System (DMS)**.
+
+The project demonstrates the complete QA lifecycle:
+
+**Requirements → Test Design → Traceability → Manual Testing → Defect Management → Automation → Test Execution → Reporting**
+
+The implementation combines **manual testing artifacts** with a maintainable **Selenium WebDriver + Java + TestNG + Maven automation framework**.
+
+The project is designed around the signed-off DMS Functional Design Document (FDD) and covers the major document-management requirements including document access, versioning, association, status management, download, check-out, deletion, and permissions.
+
+---
+
+## 🎯 QA Objectives
+
+The primary objectives of this project are to:
+
+- Convert functional requirements into structured and executable test scenarios.
+- Design detailed manual test cases with clear preconditions, steps, expected results, and requirement mapping.
+- Establish requirement-to-test traceability.
+- Build a reusable Selenium automation framework using the **Page Object Model**.
+- Validate application launch and authentication flows automatically.
+- Introduce access-aware automation for the DMS functional area.
+- Document environment blockers with reproducible evidence.
+- Maintain professional QA documentation suitable for real-world testing workflows.
+- Ensure defects are reported only when supported by actual execution evidence.
+
+---
+
+## 🚀 Key Highlights
+
+### Manual QA Coverage
+
+- **20 Test Scenarios**
+- **20 Detailed Test Cases**
+- **13 Functional Requirements**
+- **Requirement Traceability Matrix**
+- **Test Plan / Test Strategy**
+- **Execution Summary**
+- **Defect / Blocker Documentation**
+- **JIRA Defect Validation Record**
+- **QA Review Checklist**
+- **Test Review Minutes**
+
+### Automation Coverage
+
 - Selenium WebDriver
+- Java
 - TestNG
 - Maven
-- Google Chrome
+- Page Object Model
+- Centralized configuration
+- Environment-variable based credentials
+- Reusable test-data utilities
+- Login automation
+- Application launch validation
+- DMS availability validation
+- Access-gated automation for DMS requirements
 
-## QA Deliverables
-- 20 Test Scenarios
-- 20 Test Cases
-- Requirement Traceability Matrix
-- Test Plan / Test Strategy
-- Defect Log
-- Blocker Report
-- JIRA Defect Validation Record
-- QA Review Checklist
-- Test Review Minutes
-- Test Execution Summary
-- Selenium Automation Framework
-- Requirements Reference
+---
 
-## Test Execution
+## 🧩 Functional Requirement Coverage
 
-Set the required environment variables:
+The automation and QA documentation are aligned with the following DMS functional requirements:
 
+| ID | Requirement |
+|---|---|
+| FR_DMS_01 | Access Documents |
+| FR_DMS_02 | Create New Document Containers |
+| FR_DMS_03 | Add New Version / Check-In |
+| FR_DMS_04 | Linking / Associating Documents |
+| FR_DMS_05 | Trigger a Task |
+| FR_DMS_06 | Manage Document Status |
+| FR_DMS_07 | View Document Details |
+| FR_DMS_08 | Version History |
+| FR_DMS_09 | Download Document |
+| FR_DMS_10 | Check Out Document |
+| FR_DMS_11 | Delete Document |
+| FR_DMS_12 | Remove Association |
+| FR_DMS_13 | Apply Permissions |
+
+### Required DMS Navigation
+
+```text
+Audits
+   ↓
+Area
+   ↓
+Audit / Sub Audit
+   ↓
+Documents
+```
+
+---
+
+## 🏗️ Automation Framework Architecture
+
+```text
+Magnus-DMS-Automation/
+│
+├── pom.xml
+├── testng.xml
+├── README.md
+├── requirements.txt
+│
+├── src/
+│   ├── main/
+│   │   └── java/com/magnus/dms/
+│   │       ├── pages/
+│   │       │   └── LoginPage.java
+│   │       │
+│   │       └── utils/
+│   │           ├── ConfigReader.java
+│   │           └── TestDataUtil.java
+│   │
+│   └── test/
+│       ├── java/com/magnus/dms/
+│       │   ├── base/
+│       │   │   ├── BaseTest.java
+│       │   │   └── LoggedInBaseTest.java
+│       │   │
+│       │   ├── dmstests/
+│       │   │   ├── DmsAvailabilityTest.java
+│       │   │   └── DmsFunctionalAutomationTest.java
+│       │   │
+│       │   └── tests/
+│       │       ├── LoginTest.java
+│       │       └── MagnusLaunchTest.java
+│       │
+│       └── resources/
+│           ├── config.properties
+│           └── testdata/
+│               ├── DMS_Bulk_Document_1.txt
+│               ├── DMS_Bulk_Document_2.txt
+│               ├── DMS_Test_Document_V1.txt
+│               └── DMS_Test_Document_V2.txt
+│
+└── test-artifacts/
+    ├── Magnus_DMS_Test_Scenarios_UPDATED.xlsx
+    ├── Magnus_DMS_Test_Cases.xlsx
+    ├── DMS_Traceability_Matrix.csv
+    ├── DMS_Test_Plan_Strategy.txt
+    ├── DMS_Test_Execution_Summary.txt
+    ├── DMS_Defect_Log.csv
+    ├── BLK_DMS_001.txt
+    ├── DEF_DMS_001_Blocker.txt
+    ├── DMS_JIRA_Defect_Validation_Record.txt
+    ├── DMS_QA_Review_Checklist.txt
+    └── DMS_Test_Review_Minutes.txt
+```
+
+---
+
+## 🧪 Testing Strategy
+
+The project follows a structured QA approach covering:
+
+### Requirement Analysis
+
+Functional requirements were reviewed from the signed-off DMS FDD and converted into testable conditions.
+
+### Test Scenario Design
+
+High-level scenarios were created to cover positive, negative, validation, navigation, document-management, versioning, and permission-related behavior.
+
+### Test Case Design
+
+Detailed test cases were prepared with:
+
+- Test Case ID
+- Requirement ID
+- Preconditions
+- Test Steps
+- Test Data
+- Expected Result
+- Priority
+- Test Type
+
+### Traceability
+
+A Requirement Traceability Matrix maps:
+
+```text
+Requirement
+     ↓
+Test Scenario
+     ↓
+Test Case
+     ↓
+Automation Status
+```
+
+This provides visibility into requirement coverage and testing status.
+
+### Defect Management
+
+Defects are documented using structured information such as:
+
+- Summary
+- Severity
+- Priority
+- Component
+- Environment
+- Test Case ID
+- Description
+- Reproduction Steps
+- Expected Result
+- Actual Result
+
+---
+
+## 🤖 Automation Design
+
+The automation framework follows the **Page Object Model (POM)** to separate:
+
+```text
+Test Logic
+     ↓
+Page Objects
+     ↓
+Configuration / Test Data
+```
+
+### Framework Components
+
+**`BaseTest`**
+
+Responsible for WebDriver initialization, browser configuration, application launch, and cleanup.
+
+**`LoggedInBaseTest`**
+
+Provides reusable authentication setup for tests that require a logged-in session.
+
+**`LoginPage`**
+
+Encapsulates login-page locators and authentication actions.
+
+**`ConfigReader`**
+
+Loads application configuration and retrieves credentials securely from environment variables.
+
+**`TestDataUtil`**
+
+Provides reusable access to test files bundled with the project.
+
+**`DmsAvailabilityTest`**
+
+Validates whether the required Internal Audit/DMS area is accessible before attempting DMS-specific testing.
+
+**`DmsFunctionalAutomationTest`**
+
+Provides access-gated test entry points aligned with the 13 DMS functional requirements.
+
+---
+
+## 🔐 Credential Handling
+
+Credentials are **not hard-coded into the source code**.
+
+Environment variables are used:
+
+```powershell
 $env:MAGNUS_USERNAME = "your-username"
 $env:MAGNUS_PASSWORD = "your-password"
+```
 
-Run the complete suite:
+This keeps authentication data outside the repository and demonstrates basic test-automation security hygiene.
 
+---
+
+## ▶️ Running the Automation
+
+### Prerequisites
+
+- Java 17+
+- Maven 3.9+
+- Google Chrome
+- Valid Magnus test credentials
+- Internet access to the Magnus application
+
+### Set Credentials
+
+```powershell
+$env:MAGNUS_USERNAME = "your-username"
+$env:MAGNUS_PASSWORD = "your-password"
+```
+
+### Execute the Suite
+
+```powershell
 mvn test
+```
 
-## Latest Execution Result
+### TestNG Report
 
-Total Tests: 16
-Passed: 2
-Failed: 0
-Skipped: 14
-Build: SUCCESS
+After execution, the TestNG results are available at:
 
-Passed Tests:
-1. LoginTest.verifyValidLogin
-2. MagnusLaunchTest.verifyMagnusApplicationLaunches
+```text
+target/surefire-reports/testng-results.xml
+```
 
-Skipped Tests:
-- DmsAvailabilityTest.verifyInternalAuditModuleIsAvailable
-- 13 DMS functional automation tests covering FR_DMS_01 to FR_DMS_13
+---
 
-Skip Reason:
-BLK_DMS_001 – Internal Audit/Audits module required for DMS testing is not available for the current test user.
+## 📊 Latest Execution Result
 
-## Functional Requirement Coverage
+The latest verified execution produced:
 
-FR_DMS_01 – Access Documents
-FR_DMS_02 – Create New Document Containers
-FR_DMS_03 – Add New Version / Check-In
-FR_DMS_04 – Linking / Associating Documents
-FR_DMS_05 – Trigger a Task
-FR_DMS_06 – Manage Document Status
-FR_DMS_07 – View Document Details
-FR_DMS_08 – Version History
-FR_DMS_09 – Download Document
-FR_DMS_10 – Check Out Document
-FR_DMS_11 – Delete Document
-FR_DMS_12 – Remove Association
-FR_DMS_13 – Apply Permissions
+| Metric | Result |
+|---|---:|
+| Total Tests | **16** |
+| Passed | **2** |
+| Failed | **0** |
+| Skipped | **14** |
+| Build | **SUCCESS** |
 
-## DMS Navigation Required
+### Passed Tests
 
-Audits -> Area -> Audit/Sub Audit -> Documents
+```text
+LoginTest.verifyValidLogin
+MagnusLaunchTest.verifyMagnusApplicationLaunches
+```
 
-## Blocker
+These validate:
 
+- Magnus application launch
+- Valid user authentication
+- Successful redirect after login
+- Presence of the authenticated application state
+
+---
+
+## ⚠️ DMS Execution Blocker
+
+During execution, the supplied test account successfully authenticated into Magnus, but the **Internal Audit / Audits module required for DMS access was not available**.
+
+The required navigation:
+
+```text
+Audits → Area → Audit/Sub Audit → Documents
+```
+
+could therefore not be reached.
+
+The project records this as:
+
+```text
 BLK_DMS_001
+```
 
-The current test user can successfully log in, but the Internal Audit/Audits module required to access the DMS functionality is unavailable.
+### Impact
 
-Therefore, the actual DMS functional workflows cannot currently be executed.
+Because the required DMS area is inaccessible:
 
-## Defect Status
+- Actual DMS workflows cannot currently be executed.
+- The 13 DMS functional automation entry points are access-gated rather than falsely reported as passed.
+- Additional product defects cannot responsibly be raised without observing the actual DMS functionality.
 
-1 evidenced blocker is documented.
+This project intentionally follows an **evidence-based defect reporting approach**: unverified product defects are not fabricated simply to satisfy a defect-count requirement.
 
-The assignment requires 5 JIRA defects. Four additional defects have not been fabricated because the DMS functional screens are inaccessible in the current environment.
+---
 
-Additional JIRA defects must be raised only after actual DMS execution identifies deviations from the signed-off FDD.
+## 🐞 Defect Management Status
 
-## Automation Status
+### Evidenced Blocker
 
-Application launch validation: Working
-Login automation: Working
-DMS availability validation: Working
-DMS FR_DMS_01–FR_DMS_13 access-gated automation: Implemented
-Actual DMS workflow execution: Blocked by application access
+**BLK_DMS_001**
 
-## Test Artifacts
+> Internal Audit / DMS module is not available for the current test user.
 
-- Magnus_DMS_Test_Scenarios_UPDATED.xlsx
-- Magnus_DMS_Test_Cases.xlsx
-- DMS_Traceability_Matrix.csv
-- DMS_Test_Plan_Strategy.txt
-- DMS_Test_Execution_Summary.txt
-- DMS_Defect_Log.csv
-- DMS_JIRA_Defect_Validation_Record.txt
-- DMS_QA_Review_Checklist.txt
-- DMS_Test_Review_Minutes.txt
-- BLK_DMS_001.txt
-- DEF_DMS_001_Blocker.txt
+The blocker is documented with its impact, evidence, environment, and required next action.
 
-## Review Status
+### Additional Defects
 
-QA review checklist prepared.
-Test review minutes prepared.
-External peer-review confirmation is pending from a second reviewer/teammate.
+Additional JIRA defects are intentionally pending until DMS access is available and actual functional deviations can be reproduced.
 
-## Submission Status
+This demonstrates an important QA principle:
 
-Documentation package: Complete
-Automation framework: Complete
-Application launch/login validation: Complete
-DMS functional execution: Blocked by BLK_DMS_001
-Evidence-based defect reporting: Complete for currently observable blocker
+> **A defect should be raised from observable evidence, not assumption.**
+
+---
+
+## 📁 QA Deliverables
+
+The `test-artifacts` directory contains the complete documentation package:
+
+| Artifact | Purpose |
+|---|---|
+| `Magnus_DMS_Test_Scenarios_UPDATED.xlsx` | 20 high-level test scenarios |
+| `Magnus_DMS_Test_Cases.xlsx` | 20 detailed test cases |
+| `DMS_Traceability_Matrix.csv` | Requirement-to-test coverage |
+| `DMS_Test_Plan_Strategy.txt` | Test planning and strategy |
+| `DMS_Test_Execution_Summary.txt` | Execution results and status |
+| `DMS_Defect_Log.csv` | Defect / blocker tracking |
+| `BLK_DMS_001.txt` | Detailed blocker report |
+| `DEF_DMS_001_Blocker.txt` | Defect-style blocker documentation |
+| `DMS_JIRA_Defect_Validation_Record.txt` | JIRA defect validation |
+| `DMS_QA_Review_Checklist.txt` | QA review checklist |
+| `DMS_Test_Review_Minutes.txt` | Test review documentation |
+
+---
+
+## 🛠️ Technology Stack
+
+### Automation
+
+- **Java**
+- **Selenium WebDriver**
+- **TestNG**
+- **Maven**
+- **Google Chrome**
+
+### QA Practices
+
+- Requirement Analysis
+- Test Scenario Design
+- Test Case Design
+- Functional Testing
+- Negative Testing
+- Regression-Oriented Test Design
+- Requirement Traceability
+- Defect Management
+- Test Execution Reporting
+- Peer Review Preparation
+- Risk / Blocker Management
+
+### Development Practices
+
+- Page Object Model
+- Reusable Base Test Classes
+- Centralized Configuration
+- Environment-Based Credentials
+- Reusable Test Data
+- Maven Project Structure
+- Git / GitHub Version Control
+
+---
+
+## 💡 What This Project Demonstrates
+
+This project goes beyond writing Selenium scripts.
+
+It demonstrates the ability to work across the complete QA workflow:
+
+```text
+Understand Requirements
+        ↓
+Design Test Scenarios
+        ↓
+Write Detailed Test Cases
+        ↓
+Build Traceability
+        ↓
+Develop Automation
+        ↓
+Execute Tests
+        ↓
+Analyze Results
+        ↓
+Document Defects / Blockers
+        ↓
+Prepare QA Reports
+```
+
+The project also demonstrates responsible testing practice by clearly separating:
+
+```text
+PASSED
+FAILED
+SKIPPED
+BLOCKED
+NOT EXECUTED
+```
+
+rather than treating inaccessible functionality as a successful test.
+
+---
+
+## 📈 Potential Extension
+
+Once the required Internal Audit / DMS permissions and test data are available, the framework can be extended to execute the complete DMS workflows for:
+
+- Document creation
+- Document upload
+- Version / check-in
+- Document linking
+- Task creation
+- Status management
+- Document details
+- Version history
+- Download
+- Check-out
+- Delete
+- Remove association
+- Permissions
+
+The existing framework structure is intended to support adding these workflow actions without redesigning the entire project.
+
+---
+
+## 👨‍💻 Project Repository
+
+**GitHub:**  
+https://github.com/abhinavreddy6342/Magnus-DMS-QA-Automation
+
+---
+
+## 📦 Submission Package
+
+A complete project archive is included:
+
+```text
+Magnus-DMS-QA-Project-Final.zip
+```
+
+The package contains the automation source, QA documentation, test data, configuration, execution artifacts, and project setup files.
+
+---
+
+## ✅ Project Status
+
+```text
+QA Documentation       ████████████████████ 100%
+Test Scenarios         ████████████████████ 100%
+Test Cases             ████████████████████ 100%
+Traceability           ████████████████████ 100%
+Automation Framework   ████████████████████ 100%
+Launch/Login Testing   ████████████████████ 100%
+DMS Functional Access  ████████░░░░░░░░░░░░ Blocked
+```
+
+**Current status: Submission-ready QA project with documented DMS access blocker.**
+
+---
+
+## ⭐ Recruiter Takeaway
+
+**Magnus DMS QA Automation** demonstrates practical experience in both **manual QA and test automation**, with emphasis on requirement-driven testing, Selenium framework design, traceability, defect reporting, execution analysis, and professional QA documentation.
+
+The project reflects a quality-engineering mindset focused not only on *automating tests*, but also on **understanding requirements, designing meaningful coverage, validating evidence, and communicating test results clearly**.
