@@ -1,0 +1,88 @@
+﻿MAGNUS DMS – TEST REVIEW MINUTES
+
+Project:
+Magnus – Document Management System
+
+Review Date:
+04-10-2026
+
+Application:
+https://magnus.jalatechnologies.com/
+
+Reviewed By:
+QA Automation Test Engineer
+
+Documents Reviewed:
+1. Signed-off DMS FDD
+2. Test Scenarios
+3. Test Cases
+4. Requirement Traceability Matrix
+5. Test Plan / Test Strategy
+6. Defect / Blocker Log
+7. Test Execution Summary
+8. Selenium Automation Framework
+9. QA Review Checklist
+10. JIRA Defect Validation Record
+
+Functional Requirement Coverage:
+FR_DMS_01 – Access Documents
+FR_DMS_02 – Create New Document Containers
+FR_DMS_03 – Add New Version / Check-In
+FR_DMS_04 – Linking / Associating Documents
+FR_DMS_05 – Trigger a Task
+FR_DMS_06 – Manage Document Status
+FR_DMS_07 – View Document Details
+FR_DMS_08 – Version History
+FR_DMS_09 – Download Document
+FR_DMS_10 – Check Out Document
+FR_DMS_11 – Delete Document
+FR_DMS_12 – Remove Association
+FR_DMS_13 – Apply Permissions
+
+Test Design Review:
+20 test scenarios prepared.
+20 test cases prepared.
+Traceability established between requirements, scenarios and test cases.
+
+Automation Review:
+Application launch automation completed.
+Valid login automation completed.
+DMS availability validation completed.
+Access-gated automation implemented for FR_DMS_01 through FR_DMS_13.
+
+Execution Review:
+Total Tests: 16
+Passed: 2
+Failed: 0
+Skipped: 14
+Build: SUCCESS
+
+Observed Blocker:
+BLK_DMS_001 – Internal Audit / DMS module is not available for the current test user.
+
+Required DMS Navigation:
+Audits -> Area -> Audit/Sub Audit -> Documents
+
+Impact:
+The unavailable Internal Audit/DMS access prevents execution of the actual DMS functional workflows and prevents evidence-based identification of additional product defects.
+
+Defect Review:
+One evidenced blocker has been documented.
+Four additional JIRA defects cannot be legitimately raised until the DMS functionality becomes accessible and actual deviations are observed.
+
+Review Outcome:
+QA documentation, test design, traceability, automation framework, execution evidence and blocker documentation have been prepared.
+
+Open Items:
+1. Obtain Internal Audit/DMS permissions and required test data.
+2. Execute the 20 DMS test cases.
+3. Raise additional JIRA defects only when actual failures are observed.
+4. Obtain confirmation/sign-off from a second reviewer for peer review.
+
+Reviewer Confirmation:
+Reviewer Name: ______________________________
+
+Reviewer Signature/Confirmation: ______________
+
+Review Status:
+Prepared - Pending external reviewer confirmation and DMS access.
